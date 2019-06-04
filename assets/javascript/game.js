@@ -30,7 +30,7 @@ const reset = function() {
 	pcGuess = chars[Math.floor(Math.random() * chars.length)];
 	document.querySelector('#guessesLeft').innerHTML = "Guesses Left: " + guessesLeft;
 	document.querySelector('#currentGuesses').innerHTML = "Your Guesses So Far: None ";
-	document.querySelector('#pc-pick').innerHTML = "???";
+	document.querySelector('#pick').innerHTML = "???";
 }
 
 //Gameplay
@@ -45,6 +45,7 @@ document.onkeyup = function(event) {
 	if (userGuess === pcGuess) {
 		wins++;
 		document.querySelector('#wins').innerHTML = "Wins: " + wins;
+		alert("You Win!");
 		reset();
 	} 
 	else if(guessesLeft === 0) {
