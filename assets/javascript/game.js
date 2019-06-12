@@ -35,7 +35,7 @@ const reset = function() {
 
 //Gameplay
 
-document.onkeyup = function(event) {
+document.onkeyup = function checkGuess(event) {
 	const userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 	guessedLetters.push(userGuess);
 	userGuesses();
